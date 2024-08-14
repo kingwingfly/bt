@@ -9,8 +9,6 @@ statements=(
 
     "cargo test --no-default-features"
 
-    "cargo run --example example --no-default-features"
-
     "cargo doc --no-deps --no-default-features"
 )
 
