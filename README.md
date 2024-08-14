@@ -68,7 +68,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://github.com/kingwingfly/torrent)
 
-Change these: `torrent`, `torrent`, `a torrent client`, `https://github.com/kingwingfly/torrent`
+[WIP]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -100,7 +100,7 @@ Change these: `torrent`, `torrent`, `a torrent client`, `https://github.com/king
    ```
 2. Compilation
    ```sh
-   cargo build
+   cargo build --release
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

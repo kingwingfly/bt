@@ -1,5 +1,5 @@
 [workspace]
-members = ["torrent"]
+members = ["torrent_cli"]
 resolver = "2"
 
 [workspace.package]
@@ -13,10 +13,11 @@ documentation = ""
 
 [workspace.dependencies]
 torrent = { path = "torrent" }
+# async
 tokio = { version = "1", default-features = false }
 
 [profile.release]
-lto = "fat"         # async
+lto = "fat"
 opt-level = 3
 codegen-units = 1
 strip = "debuginfo"

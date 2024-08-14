@@ -1,19 +1,15 @@
 [package]
-name = "torrent"
+name = "torrent_cli"
 version.workspace = true
 edition.workspace = true
 authors.workspace = true
 license.workspace = true
 repository.workspace = true
-description = "Core of a bittorrent client."
+description = "A bittorrent client."
 
 [package.metadata.docs.rs]
 all-features = true
 rustdoc-args = ["--cfg", "docsrs"]
 
 [dependencies]
-tokio = { workspace = true,  features = [
-    "rt-multi-thread",
-    "signal",
-    "macros",
-] }
+tokio = { workspace = true, features = ["rt-multi-thread", "signal", "macros"] }
