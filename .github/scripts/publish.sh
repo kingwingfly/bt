@@ -5,6 +5,8 @@ export TERM=xterm-256color
 
 # Statements waiting to be executed
 statements=(
+    "cargo publish -p $1 --dry-run"
+
     "cargo publish -p $1"
 )
 
