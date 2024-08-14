@@ -25,4 +25,3 @@ jobs:
       - name: publish torrent_cli
         if: ${{ inputs.torrent_cli }}
         run: .github/scripts/publish_test.sh torrent_cli && .github/scripts/publish.sh torrent_cli
-
