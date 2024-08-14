@@ -1,0 +1,31 @@
+name: publish
+
+on:
+  workflow_dispatch:
+    inputs:
+      torrent:
+        description: "publish torrent"
+        type: boolean
+        default: false
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: install cargo components
+        run: rustup component add clippy
+
+      - name: run tests
+        run: .github/scripts/test.sh
+
+      - name: login to crates.io
+        run: cargo login ${{ secrets.CRATESIO }}
+
+      - name: publish torrent
+        if: ${{ inputs.torrent }}
+        run: .github/scripts/publish_test.sh torrent && .github/scripts/publish.sh torrent

@@ -1,0 +1,23 @@
+[workspace]
+members = ["torrent"]
+resolver = "2"
+
+[workspace.package]
+version = "0.0.1"
+authors = ["Louis <836250617@qq.com>"]
+description = "A bittorrent client."
+license = "MIT"
+edition = "2021"
+repository = "https://github.com/kingwingfly/bittorrent"
+documentation = ""
+
+[workspace.dependencies]
+torrent = { path = "torrent" }
+tokio = { version = "1", default-features = false }
+
+[profile.release]
+lto = "fat"         # async
+opt-level = 3
+codegen-units = 1
+strip = "debuginfo"
+panic = "abort"
