@@ -170,7 +170,11 @@ Project Link: [https://github.com/kingwingfly/torrent](https://github.com/kingwi
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
+Run
+```sh
+./doc_server.sh
+```
+to see the related documentation.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
