@@ -11,4 +11,5 @@ mod error;
 mod magnet;
 mod tracker;
 
+pub use error::Result;
 pub use magnet::Magnet;

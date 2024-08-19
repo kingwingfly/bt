@@ -1,12 +1,19 @@
 use clap::{Parser, Subcommand};
-use torrent_ui::Magnet;
+use torrent_lib::Magnet;
+use tracing::{error, info, Level};
+use tracing_subscriber::FmtSubscriber;
 
 #[tokio::main]
 async fn main() {
+    FmtSubscriber::builder()
+        .with_max_level(Level::DEBUG)
+        .without_time()
+        .with_target(false)
+        .init();
     let args = Cli::parse();
     match args.cmd {
         SubCmd::Parse { magnet } => {
-            dbg!(magnet);
+            info!("{:#?}", magnet);
         }
     }
 }

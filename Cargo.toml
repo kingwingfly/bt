@@ -1,5 +1,5 @@
 [workspace]
-members = ["torrent_ui"]
+members = ["torrent_ui", "torrent_lib"]
 resolver = "2"
 
 [workspace.package]
@@ -13,10 +13,14 @@ documentation = ""
 
 [workspace.dependencies]
 torrent_ui = { path = "torrent_ui" }
+torrent_lib = { path = "torrent_lib" }
 # async
 tokio = { version = "1", default-features = false }
 # error
 thiserror = { version = "1.0.63" }
+# tracing
+tracing = { version = "0.1.40" }
+tracing-subscriber = { version = "0.3.18" }
 
 [profile.release]
 lto = "fat"

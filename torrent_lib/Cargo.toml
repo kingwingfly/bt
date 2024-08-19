@@ -1,5 +1,5 @@
 [package]
-name = "torrent_ui"
+name = "torrent_lib"
 version.workspace = true
 edition.workspace = true
 authors.workspace = true
@@ -12,11 +12,9 @@ all-features = true
 rustdoc-args = ["--cfg", "docsrs"]
 
 [dependencies]
-torrent_lib = { workspace = true }
 # async
 tokio = { workspace = true, features = ["rt-multi-thread", "signal", "macros"] }
-# cli
-clap = { version = "4.5.16", features = ["derive"] }
-# tracing
-tracing = { workspace = true }
-tracing-subscriber = { workspace = true }
+# error
+thiserror = { workspace = true }
+# utils
+url = "2.5.2"
