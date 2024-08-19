@@ -10,4 +10,6 @@ pub enum Error {
     ParseLinkFailed(#[from] url::ParseError),
     #[error("Invalid magnet link")]
     InvalidMagnetLink,
+    #[error("Failed fetching trackers")]
+    FetchTrackersFailed,
 }

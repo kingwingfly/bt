@@ -10,12 +10,19 @@ async fn main() {
         .without_time()
         .with_target(false)
         .init();
+    if let Err(e) = run().await {
+        error!(e);
+    }
+}
+
+async fn run() -> Result<(), Box<dyn std::error::Error>> {
     let args = Cli::parse();
     match args.cmd {
         SubCmd::Parse { magnet } => {
-            info!("{:#?}", magnet);
+            info!(?magnet);
         }
     }
+    Ok(())
 }
 
 #[derive(Parser)]
