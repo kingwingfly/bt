@@ -15,6 +15,8 @@ documentation = ""
 torrent_ui = { path = "torrent_ui" }
 # async
 tokio = { version = "1", default-features = false }
+# error
+thiserror = { version = "1.0.63" }
 
 [profile.release]
 lto = "fat"
