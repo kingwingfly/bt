@@ -18,3 +18,5 @@ tokio = { workspace = true, features = ["rt-multi-thread", "signal", "macros"] }
 thiserror = { workspace = true }
 # utils
 url = "2.5.2"
+# tracing
+tracing = { workspace = true }

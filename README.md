@@ -170,6 +170,9 @@ Project Link: [https://github.com/kingwingfly/bt](https://github.com/kingwingfly
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
+```sh
+./docs.sh
+```
 - []()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

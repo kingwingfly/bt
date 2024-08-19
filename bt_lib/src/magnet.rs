@@ -34,6 +34,12 @@ impl FromStr for Magnet {
     }
 }
 
+impl Magnet {
+    pub(super) fn urn(&self) -> &str {
+        &self.xt[4..]
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;

@@ -7,9 +7,10 @@
 #![cfg_attr(docsrs, feature(doc_auto_cfg))]
 
 mod client;
+mod dht;
 mod error;
 mod magnet;
+mod torrent;
 mod tracker;
 
-pub use error::Result;
 pub use magnet::Magnet;
