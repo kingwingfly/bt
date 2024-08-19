@@ -1,5 +1,5 @@
 [workspace]
-members = ["torrent_cli"]
+members = ["torrent_ui"]
 resolver = "2"
 
 [workspace.package]
@@ -12,7 +12,7 @@ repository = "https://github.com/kingwingfly/bittorrent"
 documentation = ""
 
 [workspace.dependencies]
-torrent = { path = "torrent" }
+torrent_ui = { path = "torrent_ui" }
 # async
 tokio = { version = "1", default-features = false }
 

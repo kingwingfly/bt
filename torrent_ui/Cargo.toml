@@ -1,5 +1,5 @@
 [package]
-name = "torrent_cli"
+name = "torrent_ui"
 version.workspace = true
 edition.workspace = true
 authors.workspace = true
