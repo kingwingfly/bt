@@ -1,5 +1,5 @@
 [package]
-name = "torrent_ui"
+name = "bt_ui"
 version.workspace = true
 edition.workspace = true
 authors.workspace = true
@@ -12,7 +12,7 @@ all-features = true
 rustdoc-args = ["--cfg", "docsrs"]
 
 [dependencies]
-torrent_lib = { workspace = true }
+bt_lib = { workspace = true }
 # async
 tokio = { workspace = true, features = ["rt-multi-thread", "signal", "macros"] }
 # cli

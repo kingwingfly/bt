@@ -13,23 +13,23 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/kingwingfly/torrent">
+  <a href="https://github.com/kingwingfly/bt">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">torrent</h3>
+<h3 align="center">bt</h3>
 
   <p align="center">
-    a torrent client
+    a bt client
     <br />
-    <a href="https://github.com/kingwingfly/torrent"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/kingwingfly/bt"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/kingwingfly/torrent">View Demo</a>
+    <a href="https://github.com/kingwingfly/bt">View Demo</a>
     ·
-    <a href="https://github.com/kingwingfly/torrent/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/kingwingfly/bt/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
-    <a href="https://github.com/kingwingfly/torrent/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/kingwingfly/bt/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
 
@@ -66,7 +66,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://github.com/kingwingfly/torrent)
+[![Product Name Screen Shot][product-screenshot]](https://github.com/kingwingfly/bt)
 
 [WIP]
 
@@ -96,7 +96,7 @@
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/kingwingfly/torrent.git
+   git clone https://github.com/kingwingfly/bt.git
    ```
 2. Compilation
    ```sh
@@ -112,7 +112,7 @@
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-_For more examples, please refer to the [Documentation](https://github.com/kingwingfly/torrent)_
+_For more examples, please refer to the [Documentation](https://github.com/kingwingfly/bt)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -123,7 +123,7 @@ _For more examples, please refer to the [Documentation](https://github.com/kingw
 
 - [ ] Feature
 
-See the [open issues](https://github.com/kingwingfly/torrent/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/kingwingfly/bt/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -161,7 +161,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Louis - 836250617@qq.com
 
-Project Link: [https://github.com/kingwingfly/torrent](https://github.com/kingwingfly/torrent)
+Project Link: [https://github.com/kingwingfly/bt](https://github.com/kingwingfly/bt)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -178,16 +178,16 @@ Project Link: [https://github.com/kingwingfly/torrent](https://github.com/kingwi
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/kingwingfly/torrent.svg?style=for-the-badge
-[contributors-url]: https://github.com/kingwingfly/torrent/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/kingwingfly/torrent.svg?style=for-the-badge
-[forks-url]: https://github.com/kingwingfly/torrent/network/members
-[stars-shield]: https://img.shields.io/github/stars/kingwingfly/torrent.svg?style=for-the-badge
-[stars-url]: https://github.com/kingwingfly/torrent/stargazers
-[issues-shield]: https://img.shields.io/github/issues/kingwingfly/torrent.svg?style=for-the-badge
-[issues-url]: https://github.com/kingwingfly/torrent/issues
-[license-shield]: https://img.shields.io/github/license/kingwingfly/torrent.svg?style=for-the-badge
-[license-url]: https://github.com/kingwingfly/torrent/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/kingwingfly/bt.svg?style=for-the-badge
+[contributors-url]: https://github.com/kingwingfly/bt/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/kingwingfly/bt.svg?style=for-the-badge
+[forks-url]: https://github.com/kingwingfly/bt/network/members
+[stars-shield]: https://img.shields.io/github/stars/kingwingfly/bt.svg?style=for-the-badge
+[stars-url]: https://github.com/kingwingfly/bt/stargazers
+[issues-shield]: https://img.shields.io/github/issues/kingwingfly/bt.svg?style=for-the-badge
+[issues-url]: https://github.com/kingwingfly/bt/issues
+[license-shield]: https://img.shields.io/github/license/kingwingfly/bt.svg?style=for-the-badge
+[license-url]: https://github.com/kingwingfly/bt/blob/master/LICENSE.txt
 [product-screenshot]: images/screenshot.png
 [Rust]: https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=Rust&logoColor=orange
 [Rust-url]: https://www.rust-lang.org

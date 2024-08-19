@@ -1,5 +1,5 @@
+use bt_lib::Magnet;
 use clap::{Parser, Subcommand};
-use torrent_lib::Magnet;
 use tracing::{error, info, Level};
 use tracing_subscriber::FmtSubscriber;
 

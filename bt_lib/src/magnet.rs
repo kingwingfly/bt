@@ -19,7 +19,7 @@ impl FromStr for Magnet {
     fn from_str(s: &str) -> Result<Self> {
         let url = Url::parse(s)?;
         if url.scheme() != "magnet" {
-            return Err(Error::InvalidMagnetLinkError);
+            return Err(Error::InvalidMagnetLink);
         }
         let mut magnet = Magnet::default();
         for (k, v) in url.query_pairs() {
@@ -41,7 +41,6 @@ mod tests {
     #[test]
     fn test_magnet_parser() {
         let s = "magnet:?xt=urn:btih:cfc214278888c26cb1516399a304c4f74ff6a810&dn=archlinux-2024.08.01-x86_64.iso";
-        let magnet: Magnet = s.parse().unwrap();
-        dbg!(magnet);
+        assert!(s.parse::<Magnet>().is_ok());
     }
 }

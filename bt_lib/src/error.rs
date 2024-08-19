@@ -7,7 +7,7 @@ pub type Result<T> = core::result::Result<T, Error>;
 #[derive(Error, Debug)]
 pub enum Error {
     #[error("Failed parsing link")]
-    ParseLinkError(#[from] url::ParseError),
+    ParseLinkFailed(#[from] url::ParseError),
     #[error("Invalid magnet link")]
-    InvalidMagnetLinkError,
+    InvalidMagnetLink,
 }
