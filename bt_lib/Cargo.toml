@@ -22,3 +22,6 @@ url = "2.5.2"
 tracing = { workspace = true }
 # net
 reqwest = { version = "0.12.5", features = ["blocking"] }
+
+[dev-dependencies]
+tracing-subscriber = { workspace = true, features = ["env-filter"] }

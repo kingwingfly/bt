@@ -19,4 +19,4 @@ tokio = { workspace = true, features = ["rt-multi-thread", "signal", "macros"] }
 clap = { version = "4.5.16", features = ["derive"] }
 # tracing
 tracing = { workspace = true }
-tracing-subscriber = { workspace = true }
+tracing-subscriber = { workspace = true, features = ["env-filter"] }
