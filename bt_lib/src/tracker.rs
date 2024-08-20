@@ -1,7 +1,7 @@
 use crate::{
     error::{Error, Result},
     magnet::Magnet,
-    peer::Peer,
+    peer::Peers,
 };
 use bendy::decoding::FromBencode;
 use reqwest::Client;
@@ -61,13 +61,13 @@ impl Trackers {
         client: Client,
         peer_id: [u8; 20],
         magnet: &Magnet,
-    ) -> Result<HashSet<Peer>> {
+    ) -> Result<Peers> {
         async fn inner(
             client: Client,
             url: Url,
             info_hash: [u8; 20],
             peer_id: [u8; 20],
-        ) -> Result<HashSet<Peer>> {
+        ) -> Result<Peers> {
             let mut url = url;
             add_bytes_query_param(&mut url, "info_hash", &info_hash);
             add_bytes_query_param(&mut url, "peer_id", &peer_id);
@@ -76,9 +76,8 @@ impl Trackers {
                 return Err(Error::TrackerNoPeer);
             }
             let body = resp.bytes().await?;
-            let p = Peer::from_bencode(&body).map_err(|_| Error::ParsePeerFailed)?;
-            dbg!(p);
-            Ok(HashSet::new())
+            let p = Peers::from_bencode(&body).map_err(|_| Error::ParsePeerFailed)?;
+            Ok(p)
         }
         let info_hash = magnet.hash()?;
         let mut jhs = vec![];
@@ -98,15 +97,16 @@ impl Trackers {
                 peer_id,
             )))
         }
-        let mut peers = HashSet::new();
+        let mut peers = Peers::default();
         for jh in jhs {
             if let Ok(p) = jh.await {
                 match p {
-                    Ok(p) => peers.extend(p),
+                    Ok(p) => peers |= p,
                     Err(e) => debug!("{}", e),
                 }
             }
         }
+        info!("{} peers fetched", peers.len());
         Ok(peers)
     }
 }
