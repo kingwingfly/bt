@@ -10,7 +10,9 @@ mod client;
 mod dht;
 mod error;
 mod magnet;
+mod peer;
 mod torrent;
 mod tracker;
 
+pub use client::Client;
 pub use magnet::Magnet;

@@ -5,24 +5,28 @@ use url::Url;
 
 /// The tracker
 #[derive(Debug, Hash, Eq, PartialEq)]
-#[non_exhaustive]
-pub(super) enum Tracker {
-    Http(Url),
-    Udp(Url),
+pub(super) struct Tracker {
+    pub(super) url: Url,
 }
 
-pub(super) fn trackers() -> Result<HashSet<Tracker>> {
-    let resp = reqwest::blocking::get("https://cf.trackerslist.com/best.txt")
+impl Tracker {
+    pub(super) fn new(url: Url) -> Option<Self> {
+        match url.scheme() {
+            "http" => Some(Self { url }),
+            _ => None,
+        }
+    }
+}
+
+pub(super) async fn trackers() -> Result<HashSet<Tracker>> {
+    let resp = reqwest::get("https://cf.trackerslist.com/best.txt")
+        .await
         .map_err(|_| Error::FetchTrackersFailed)?;
-    let body = resp.text().unwrap();
+    let body = resp.text().await.unwrap();
     let trackers: HashSet<_> = body
         .lines()
         .filter_map(|line| Url::parse(line).ok())
-        .filter_map(|line| match line.scheme() {
-            "http" => Some(Tracker::Http(line)),
-            "udp" => Some(Tracker::Udp(line)),
-            _ => None,
-        })
+        .filter_map(Tracker::new)
         .collect();
     info!(
         "{} trackers fetched from \"https://cf.trackerslist.com/best.txt\"",
@@ -35,15 +39,15 @@ pub(super) fn trackers() -> Result<HashSet<Tracker>> {
 mod tests {
     use super::*;
 
-    #[test]
-    fn test_trackers() {
+    #[tokio::test]
+    async fn test_trackers() {
         tracing_subscriber::FmtSubscriber::builder()
             .with_env_filter("bt_lib=debug")
             .with_target(false)
             .without_time()
             .with_test_writer()
             .init();
-        let trackers = trackers();
+        let trackers = trackers().await;
         assert!(trackers.is_ok());
     }
 }

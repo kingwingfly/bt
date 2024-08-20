@@ -12,4 +12,8 @@ pub enum Error {
     InvalidMagnetLink,
     #[error("Failed fetching trackers")]
     FetchTrackersFailed,
+    #[error("Unsupport: {}", reason)]
+    Unsupport { reason: String },
+    #[error("Network error")]
+    Network(#[from] reqwest::Error),
 }
