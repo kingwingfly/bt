@@ -19,6 +19,7 @@ thiserror = { workspace = true }
 # utils
 url = { version = "2.5.2" }
 rand = { version = "0.8.5" }
+bendy = { version = "0.3.3" }
 # tracing
 tracing = { workspace = true }
 # net

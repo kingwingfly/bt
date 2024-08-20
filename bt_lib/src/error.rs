@@ -14,6 +14,10 @@ pub enum Error {
     FetchTrackersFailed,
     #[error("Unsupport: {}", reason)]
     Unsupport { reason: String },
-    #[error("Network error")]
+    #[error("Network error: {0}")]
     Network(#[from] reqwest::Error),
+    #[error("Tracker no peer")]
+    TrackerNoPeer,
+    #[error("Failed to parse peers")]
+    ParsePeerFailed,
 }
