@@ -1,8 +1,7 @@
-use std::time::Duration;
-
 use crate::magnet::Magnet;
 use crate::{error::Result, tracker::Trackers};
 use rand::{distributions::Alphanumeric, thread_rng, Rng};
+use std::time::Duration;
 
 /// The client to do network operations.
 #[derive(Debug)]
