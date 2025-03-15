@@ -17,10 +17,10 @@ bt_lib = { path = "bt_lib" }
 # async
 tokio = { version = "1", default-features = false }
 # error
-thiserror = { version = "1.0.63" }
+thiserror = { version = "1.0.69" }
 # tracing
-tracing = { version = "0.1.40" }
-tracing-subscriber = { version = "0.3.18" }
+tracing = { version = "0.1.41" }
+tracing-subscriber = { version = "0.3.19" }
 
 [profile.release]
 lto = "fat"
